@@ -5,7 +5,7 @@ import programs from './store/programs';
 
 const App: React.FC = () => {
   return (
-    <div>
+    <div className="overflow-hidden relative">
       <Taskbar />
       {programs.programs.map((program) => (
         <Program program={program} key={program.id} />

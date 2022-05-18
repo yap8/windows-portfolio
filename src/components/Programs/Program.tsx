@@ -1,4 +1,5 @@
 import { Rnd } from 'react-rnd';
+import { twMerge } from 'tailwind-merge';
 
 import { Program as ProgramInterface } from '../../store/programs';
 import Button from '../Button';
@@ -10,7 +11,10 @@ interface ProgramProps {
 const Program: React.FC<ProgramProps> = ({ program }) => {
   return (
     <Rnd
-      className="flex flex-col p-0.5 border-2 border-t-white border-l-white border-r-black border-b-black bg-app-gray absolute"
+      className={twMerge(
+        'flex flex-col p-0.5 border-2 border-t-white border-l-white border-r-black border-b-black bg-app-gray absolute',
+        program.active && 'z-10'
+      )}
       dragHandleClassName="handle"
       minWidth={300}
       minHeight={200}
