@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react-lite';
 
-import start from '../../store/start';
-import Button from '../Button';
+import start from '../../../store/start';
+import Button from '../../Button';
 import StartMenu from './StartMenu';
 
 interface StartProps {
