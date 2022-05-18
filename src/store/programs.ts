@@ -1,6 +1,6 @@
 import { makeAutoObservable } from 'mobx';
 
-interface Program {
+export interface Program {
   id: number;
   title: string;
   active: boolean;
