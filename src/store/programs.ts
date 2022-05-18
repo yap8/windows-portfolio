@@ -4,6 +4,7 @@ export interface Program {
   id: number;
   title: string;
   active: boolean;
+  component: string;
 }
 
 class Programs {
@@ -13,8 +14,8 @@ class Programs {
     makeAutoObservable(this);
 
     this.programs = [
-      { id: 1, title: 'Program 1', active: true },
-      { id: 2, title: 'Program 2', active: false },
+      { id: 1, title: 'Welcome', active: true, component: 'Welcome' },
+      { id: 2, title: 'Contact', active: false, component: 'Contact' },
     ];
   }
 

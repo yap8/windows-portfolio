@@ -8,12 +8,14 @@ interface ProgramProps {
   program: ProgramInterface;
   handleActive: (id: number) => void;
   handleClose: (id: number) => void;
+  component: React.ReactNode;
 }
 
 const Program: React.FC<ProgramProps> = ({
   program,
   handleActive,
   handleClose,
+  component,
 }) => {
   return (
     <Rnd
@@ -35,11 +37,7 @@ const Program: React.FC<ProgramProps> = ({
           x
         </Button>
       </header>
-      <div className="p-4">
-        <h1>
-          Welcome to my <b>portfolio</b>
-        </h1>
-      </div>
+      <div className="p-4">{component}</div>
     </Rnd>
   );
 };

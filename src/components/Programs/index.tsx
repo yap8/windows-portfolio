@@ -1,6 +1,8 @@
 import { observer } from 'mobx-react-lite';
+
 import programs from '../../store/programs';
 import Program from './Program';
+import { getComponent } from './routes';
 
 const Programs = observer(() => {
   const handleClose = (id: number) => {
@@ -18,6 +20,7 @@ const Programs = observer(() => {
           program={program}
           handleClose={handleClose}
           handleActive={handleActive}
+          component={getComponent(program.component)}
           key={program.id}
         />
       ))}
