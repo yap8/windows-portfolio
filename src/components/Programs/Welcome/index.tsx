@@ -12,16 +12,29 @@ const Welcome = () => {
           <div className="mr-4">ICON</div>
           <div>
             <h3 className="font-semibold mb-4">Did you know...</h3>
-            <p>To open a program, you just doubleclick an icon.</p>
+            <p className="max-w-xs">
+              To open a program, you just doubleclick an icon.
+            </p>
           </div>
         </div>
         <div className="flex flex-col flex-1">
-          <Button className="mb-2">About me</Button>
-          <Button className="mb-2">Projects</Button>
-          <Button className="mb-2">GitHub</Button>
-          <Button className="mb-2">Resume</Button>
+          <Button className="mb-2 justify-center">About me</Button>
+          <Button className="mb-2 justify-center">Projects</Button>
+          <a
+            className="block w-full mb-2"
+            href="https://github.com/yap8"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button className="w-full justify-center">GitHub</Button>
+          </a>
           <hr className="border-app-dark gray mb-2" />
-          <Button onClick={() => programs.closeProgram(1)}>Close</Button>
+          <Button
+            className="justify-center"
+            onClick={() => programs.closeProgram(1)}
+          >
+            Close
+          </Button>
         </div>
       </div>
     </div>
