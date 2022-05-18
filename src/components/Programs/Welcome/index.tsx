@@ -9,7 +9,12 @@ const Welcome = () => {
       </h2>
       <div className="flex">
         <div className="flex p-5 bg-app-yellow mr-4 border border-black">
-          <div className="mr-4">ICON</div>
+          <div className="mr-4">
+            <div
+              className="h-8 w-8"
+              style={{ backgroundImage: `url('images/Tip of the Day.ico')` }}
+            />
+          </div>
           <div>
             <h3 className="font-semibold mb-4">Did you know...</h3>
             <p className="max-w-xs">

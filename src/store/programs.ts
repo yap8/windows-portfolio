@@ -21,7 +21,7 @@ class Programs {
       {
         id: 1,
         title: 'Welcome',
-        minWidth: 500,
+        minWidth: 400,
         minHeight: 320,
         maxWidth: 640,
         maxHeight: 320,
