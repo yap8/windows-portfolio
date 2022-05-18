@@ -33,7 +33,10 @@ const StartMenu: React.FC<StartMenuProps> = ({ active }) => {
           <StartMenuButton iconURL="images/Mail.ico">Contact</StartMenuButton>
         </li>
         <li>
-          <StartMenuButton iconURL="images/Turn Off Computer (display only).ico">
+          <StartMenuButton
+            iconURL="images/Turn Off Computer (display only).ico"
+            onClick={() => window.close()}
+          >
             Shut down
           </StartMenuButton>
         </li>

@@ -18,7 +18,7 @@ const Start: React.FC<StartProps> = observer(() => {
   };
 
   return (
-    <div className="mr-1">
+    <div className="mr-1" onClick={(e) => e.stopPropagation()}>
       <StartMenu active={start.active} />
       <Button
         iconURL="images/Windows logo (without text).ico"
