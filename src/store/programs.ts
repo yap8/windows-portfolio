@@ -1,5 +1,7 @@
 import { makeAutoObservable } from 'mobx';
 
+import { programs } from './data';
+
 export interface Program {
   id: number;
   title: string;
@@ -17,19 +19,7 @@ class Programs {
   constructor() {
     makeAutoObservable(this);
 
-    this.programs = [
-      {
-        id: 1,
-        title: 'Welcome',
-        minWidth: 400,
-        minHeight: 320,
-        maxWidth: 640,
-        maxHeight: 320,
-        active: true,
-        component: 'Welcome',
-      },
-      { id: 2, title: 'Contact', active: false, component: 'Contact' },
-    ];
+    this.programs = programs;
   }
 
   openProgram(program: Program) {
