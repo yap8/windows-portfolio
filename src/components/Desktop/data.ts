@@ -1,56 +1,61 @@
 export interface Shortcut {
-  id: number;
-  title?: string;
-  iconURL?: string;
+  title: string;
+  iconURL: string;
+  program: string;
 }
 
 export const shortcuts: Array<Shortcut> = [
   {
-    id: 1,
     title: 'Projects',
     iconURL: 'images/Folder.ico',
+    program: 'projects',
   },
-  ...Array(13).fill({ id: Math.random() }),
+  ...Array(12).fill({ slug: Math.random() }),
   {
-    id: 2,
+    title: 'Language',
+    iconURL: 'images/Earth (16 colors).ico',
+    program: 'language',
+  },
+  {
     title: 'Contact',
     iconURL: 'images/Mail.ico',
+    program: 'contact',
   },
-  ...Array(13).fill({ id: Math.random() }),
+  ...Array(13).fill({ slug: Math.random() }),
   {
-    id: 4,
     title: 'Resume',
     iconURL: 'images/Notepad document.ico',
+    program: 'resume',
   },
-  ...Array(13).fill({ id: Math.random() }),
+  ...Array(13).fill({ slug: Math.random() }),
   {
-    id: 454,
     title: 'GitHub',
     iconURL: 'images/User with computer.ico',
+    program: 'github',
   },
-  ...Array(13).fill({ id: Math.random() }),
+  ...Array(13).fill({ slug: Math.random() }),
   {
-    id: 123,
     title: 'Old portfolio',
     iconURL: 'images/Recycle Bin with paper.ico',
+    program: 'old-portfolio',
   },
-  ...Array(13).fill({ id: Math.random() }),
-  ...Array(14).fill({ id: Math.random() }),
-  ...Array(14).fill({ id: Math.random() }),
-  ...Array(11).fill({ id: Math.random() }),
+  ...Array(13).fill({ slug: Math.random() }),
+  ...Array(14).fill({ slug: Math.random() }),
+  ...Array(14).fill({ slug: Math.random() }),
+  ...Array(11).fill({ slug: Math.random() }),
   {
-    id: 5,
     title: 'title',
     iconURL: 'images/Folder.ico',
+    program: 'folder-1',
   },
   {
-    id: 6,
     title: 'title',
     iconURL: 'images/Folder.ico',
+    program: 'folder-2',
   },
   {
-    id: 7,
     title: 'title',
     iconURL: 'images/Folder.ico',
+    program: 'folder-3',
   },
 ];
