@@ -22,8 +22,10 @@ class Programs {
     this.programs = programs;
   }
 
-  openProgram(program: Program) {
-    this.programs = [...this.programs, program];
+  openWelcome() {
+    if (this.programs.find((program) => program.id === 1)) return;
+
+    this.programs = [...this.programs, programs[0]];
   }
 
   closeProgram(id: number) {

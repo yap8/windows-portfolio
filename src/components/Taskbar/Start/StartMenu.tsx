@@ -1,4 +1,5 @@
 import { twMerge } from 'tailwind-merge';
+import programs from '../../../store/programs';
 
 import StartMenuButton from './StartMenuButton';
 
@@ -27,7 +28,12 @@ const StartMenu: React.FC<StartMenuProps> = ({ active }) => {
           </StartMenuButton>
         </li>
         <li>
-          <StartMenuButton iconURL="images/Help book.ico">Help</StartMenuButton>
+          <StartMenuButton
+            iconURL="images/Help book.ico"
+            onClick={() => programs.openWelcome()}
+          >
+            Help
+          </StartMenuButton>
         </li>
         <li>
           <StartMenuButton iconURL="images/Mail.ico">Contact</StartMenuButton>
