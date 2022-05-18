@@ -6,9 +6,10 @@ import Button from '../Button';
 
 interface ProgramProps {
   program: ProgramInterface;
+  handleClose: (id: number) => void;
 }
 
-const Program: React.FC<ProgramProps> = ({ program }) => {
+const Program: React.FC<ProgramProps> = ({ program, handleClose }) => {
   return (
     <Rnd
       className={twMerge(
@@ -21,7 +22,10 @@ const Program: React.FC<ProgramProps> = ({ program }) => {
     >
       <header className="handle cursor-grab flex justify-between bg-app-blue text-white p-1">
         <h2 className="mr-4">{program.title}</h2>
-        <Button className="justify-center w-6 h-6 text-black font-bold">
+        <Button
+          className="justify-center w-6 h-6 text-black font-bold"
+          onClick={() => handleClose(program.id)}
+        >
           x
         </Button>
       </header>
