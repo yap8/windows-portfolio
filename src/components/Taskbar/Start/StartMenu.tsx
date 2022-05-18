@@ -10,12 +10,12 @@ interface StartMenuProps {
 
 const StartMenu: React.FC<StartMenuProps> = ({ active }) => {
   const handleOpenWelcome = () => {
-    programs.openWelcome();
+    programs.openProgram('welcome');
     start.close();
   };
 
   const handleOpenContact = () => {
-    programs.openContact();
+    programs.openProgram('contact');
     start.close();
   };
 

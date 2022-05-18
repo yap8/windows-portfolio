@@ -5,12 +5,12 @@ import Program from './Program';
 import { getComponent } from './routes';
 
 const Programs = observer(() => {
-  const handleClose = (id: number) => {
-    programs.closeProgram(id);
+  const handleClose = (slug: string) => {
+    programs.closeProgram(slug);
   };
 
-  const handleActive = (id: number) => {
-    programs.makeProgramActive(id);
+  const handleActive = (slug: string) => {
+    programs.makeProgramActive(slug);
   };
 
   return (
@@ -21,7 +21,7 @@ const Programs = observer(() => {
           handleClose={handleClose}
           handleActive={handleActive}
           component={getComponent(program.component)}
-          key={program.id}
+          key={program.slug}
         />
       ))}
     </div>

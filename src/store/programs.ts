@@ -1,9 +1,9 @@
 import { makeAutoObservable } from 'mobx';
 
-import { programs } from './data';
+import { welcome, programs } from '../data';
 
 export interface Program {
-  id: number;
+  slug: string;
   title: string;
   minWidth?: number;
   minHeight?: number;
@@ -19,34 +19,33 @@ class Programs {
   constructor() {
     makeAutoObservable(this);
 
-    this.programs = [programs[0]];
+    this.programs = [welcome];
   }
 
-  openWelcome() {
-    if (this.programs.find((program) => program.id === 1)) {
-      return this.makeProgramActive(1);
-    }
+  openProgram(slug: string) {
+    // check if program is already opened
+    const opened = this.programs.find((program) => program.slug === slug);
 
-    this.programs = [...this.programs, programs[0]];
-    this.makeProgramActive(1);
+    // if so make it active
+    if (opened) return this.makeProgramActive(opened.slug);
+
+    // check if program is defined
+    const programToBeOpened = programs.find((program) => program.slug === slug);
+
+    if (!programToBeOpened) return;
+
+    // open it and make it active
+    this.programs.push(programToBeOpened);
+    this.makeProgramActive(programToBeOpened.slug);
   }
 
-  openContact() {
-    if (this.programs.find((program) => program.id === 2)) {
-      return this.makeProgramActive(2);
-    }
-
-    this.programs = [...this.programs, programs[1]];
-    this.makeProgramActive(2);
+  closeProgram(slug: string) {
+    this.programs = this.programs.filter((program) => program.slug !== slug);
   }
 
-  closeProgram(id: number) {
-    this.programs = this.programs.filter((program) => program.id !== id);
-  }
-
-  makeProgramActive(id: number) {
+  makeProgramActive(slug: string) {
     this.programs = this.programs.map((program) =>
-      program.id === id
+      program.slug === slug
         ? { ...program, active: true }
         : { ...program, active: false }
     );

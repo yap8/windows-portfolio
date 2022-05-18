@@ -6,8 +6,8 @@ import Button from '../Button';
 
 interface ProgramProps {
   program: ProgramInterface;
-  handleActive: (id: number) => void;
-  handleClose: (id: number) => void;
+  handleActive: (slug: string) => void;
+  handleClose: (slug: string) => void;
   component: React.ReactNode;
 }
 
@@ -28,13 +28,13 @@ const Program: React.FC<ProgramProps> = ({
       minHeight={program.minHeight || 320}
       maxWidth={program.maxWidth}
       maxHeight={program.maxHeight}
-      onMouseDown={() => handleActive(program.id)}
+      onMouseDown={() => handleActive(program.slug)}
     >
       <header className="handle cursor-grab flex justify-between bg-app-blue text-white p-1">
         <h2 className="mr-4">{program.title}</h2>
         <Button
           className="justify-center w-6 h-6 text-black font-bold"
-          onClick={() => handleClose(program.id)}
+          onClick={() => handleClose(program.slug)}
         >
           x
         </Button>

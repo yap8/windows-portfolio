@@ -9,14 +9,14 @@ interface WindowProps {
 }
 
 const Windows: React.FC<WindowProps> = observer(({ className }) => {
-  const handleActive = (id: number) => {
-    programs.makeProgramActive(id);
+  const handleActive = (slug: string) => {
+    programs.makeProgramActive(slug);
   };
 
   return (
     <ul className={twMerge('flex items-center', className)}>
       {programs.programs.map((window) => (
-        <Window window={window} handleActive={handleActive} key={window.id} />
+        <Window window={window} handleActive={handleActive} key={window.slug} />
       ))}
     </ul>
   );

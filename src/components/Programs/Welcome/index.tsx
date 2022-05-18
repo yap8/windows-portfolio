@@ -44,7 +44,7 @@ const Welcome = () => {
           <hr className="border-app-dark gray mb-2" />
           <Button
             className="justify-center"
-            onClick={() => programs.closeProgram(1)}
+            onClick={() => programs.closeProgram('welcome')}
           >
             Close
           </Button>
