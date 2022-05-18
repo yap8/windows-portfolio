@@ -3,7 +3,7 @@ import Taskbar from './components/Taskbar';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <div>
       <Taskbar />
       <Desktop />
     </div>
