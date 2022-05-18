@@ -24,8 +24,10 @@ const Program: React.FC<ProgramProps> = ({
         program.active && 'z-10'
       )}
       dragHandleClassName="handle"
-      minWidth={300}
-      minHeight={200}
+      minWidth={program.minWidth || 640}
+      minHeight={program.minHeight || 320}
+      maxWidth={program.maxWidth}
+      maxHeight={program.maxHeight}
       onMouseDown={() => handleActive(program.id)}
     >
       <header className="handle cursor-grab flex justify-between bg-app-blue text-white p-1">

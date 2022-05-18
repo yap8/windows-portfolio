@@ -3,6 +3,10 @@ import { makeAutoObservable } from 'mobx';
 export interface Program {
   id: number;
   title: string;
+  minWidth?: number;
+  minHeight?: number;
+  maxWidth?: number;
+  maxHeight?: number;
   active: boolean;
   component: string;
 }
@@ -14,7 +18,16 @@ class Programs {
     makeAutoObservable(this);
 
     this.programs = [
-      { id: 1, title: 'Welcome', active: true, component: 'Welcome' },
+      {
+        id: 1,
+        title: 'Welcome',
+        minWidth: 500,
+        minHeight: 320,
+        maxWidth: 640,
+        maxHeight: 320,
+        active: true,
+        component: 'Welcome',
+      },
       { id: 2, title: 'Contact', active: false, component: 'Contact' },
     ];
   }
