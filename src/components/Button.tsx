@@ -16,7 +16,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       className={twMerge(
-        'h-8 flex items-center justify-start border-2 p-1',
+        'h-8 flex items-center justify-start border-2 border-black p-1',
         active
           ? 'border-b-white border-r-white'
           : 'border-t-white border-l-white',
