@@ -8,6 +8,14 @@ interface StartMenuProps {
 }
 
 const StartMenu: React.FC<StartMenuProps> = ({ active }) => {
+  const handleOpenWelcome = () => {
+    programs.openWelcome();
+  };
+
+  const handleOpenContact = () => {
+    programs.openContact();
+  };
+
   return (
     <div
       className={twMerge(
@@ -30,13 +38,18 @@ const StartMenu: React.FC<StartMenuProps> = ({ active }) => {
         <li>
           <StartMenuButton
             iconURL="images/Help book.ico"
-            onClick={() => programs.openWelcome()}
+            onClick={handleOpenWelcome}
           >
             Help
           </StartMenuButton>
         </li>
         <li>
-          <StartMenuButton iconURL="images/Mail.ico">Contact</StartMenuButton>
+          <StartMenuButton
+            iconURL="images/Mail.ico"
+            onClick={handleOpenContact}
+          >
+            Contact
+          </StartMenuButton>
         </li>
         <li>
           <StartMenuButton
