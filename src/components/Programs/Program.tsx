@@ -6,10 +6,15 @@ import Button from '../Button';
 
 interface ProgramProps {
   program: ProgramInterface;
+  handleActive: (id: number) => void;
   handleClose: (id: number) => void;
 }
 
-const Program: React.FC<ProgramProps> = ({ program, handleClose }) => {
+const Program: React.FC<ProgramProps> = ({
+  program,
+  handleActive,
+  handleClose,
+}) => {
   return (
     <Rnd
       className={twMerge(
@@ -19,6 +24,7 @@ const Program: React.FC<ProgramProps> = ({ program, handleClose }) => {
       dragHandleClassName="handle"
       minWidth={300}
       minHeight={200}
+      onMouseDown={() => handleActive(program.id)}
     >
       <header className="handle cursor-grab flex justify-between bg-app-blue text-white p-1">
         <h2 className="mr-4">{program.title}</h2>

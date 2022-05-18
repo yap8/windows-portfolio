@@ -25,6 +25,14 @@ class Programs {
   closeProgram(id: number) {
     this.programs = this.programs.filter((program) => program.id !== id);
   }
+
+  makeProgramActive(id: number) {
+    this.programs = this.programs.map((program) =>
+      program.id === id
+        ? { ...program, active: true }
+        : { ...program, active: false }
+    );
+  }
 }
 
 export default new Programs();

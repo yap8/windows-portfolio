@@ -10,11 +10,20 @@ const App: React.FC = observer(() => {
     programs.closeProgram(id);
   };
 
+  const handleActive = (id: number) => {
+    programs.makeProgramActive(id);
+  };
+
   return (
     <div className="overflow-hidden relative">
       <Taskbar />
       {programs.programs.map((program) => (
-        <Program program={program} handleClose={handleClose} key={program.id} />
+        <Program
+          program={program}
+          handleClose={handleClose}
+          handleActive={handleActive}
+          key={program.id}
+        />
       ))}
       <Desktop />
     </div>
