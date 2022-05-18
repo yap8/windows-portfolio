@@ -5,7 +5,7 @@ interface ShortcutProps {
 }
 
 const Shortcut: React.FC<ShortcutProps> = ({ shortcut }) => {
-  if (!shortcut) return null;
+  if (!shortcut.title || !shortcut.iconURL) return <li></li>;
 
   return (
     <li>
