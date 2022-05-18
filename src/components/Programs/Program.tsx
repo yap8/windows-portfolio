@@ -36,7 +36,7 @@ const Program: React.FC<ProgramProps> = ({
           className="justify-center w-6 h-6 text-black font-bold"
           onClick={() => handleClose(program.slug)}
         >
-          x
+          &#10006;
         </Button>
       </header>
       <div className="p-4">{component}</div>
