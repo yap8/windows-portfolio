@@ -1,9 +1,18 @@
 interface FormFieldProps {
   name: string;
   type?: 'text' | 'email' | 'textarea';
+  value: string;
+  onChange: (
+    e: React.FormEvent<HTMLInputElement> | React.FormEvent<HTMLTextAreaElement>
+  ) => void;
 }
 
-const FormField: React.FC<FormFieldProps> = ({ name, type = 'text' }) => {
+const FormField: React.FC<FormFieldProps> = ({
+  name,
+  type = 'text',
+  value,
+  ...props
+}) => {
   if (type === 'textarea')
     return (
       <>
@@ -14,7 +23,9 @@ const FormField: React.FC<FormFieldProps> = ({ name, type = 'text' }) => {
           className="flex-1 h-32 px-2 pb-4 border-2 border-white border-t-app-darkgray border-l-app-darkgray resize-none"
           name={name}
           id={name}
-        ></textarea>
+          value={value}
+          {...props}
+        />
       </>
     );
 
@@ -28,6 +39,8 @@ const FormField: React.FC<FormFieldProps> = ({ name, type = 'text' }) => {
         type={type}
         name={name}
         id={name}
+        value={value}
+        {...props}
       />
     </>
   );
