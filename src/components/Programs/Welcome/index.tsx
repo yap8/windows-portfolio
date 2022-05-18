@@ -28,6 +28,14 @@ const Welcome = () => {
           >
             <Button className="w-full justify-center">GitHub</Button>
           </a>
+          <a
+            className="block w-full mb-2"
+            href="https://yap8.github.io/portfolio/Nebozhenko_Frontend_Resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button className="w-full justify-center">Resume</Button>
+          </a>
           <hr className="border-app-dark gray mb-2" />
           <Button
             className="justify-center"
