@@ -1,20 +1,11 @@
-import { twMerge } from 'tailwind-merge';
+import Button from '../Button';
 
 interface StartProps {
   className?: string;
 }
 
 const Start: React.FC<StartProps> = ({ className }) => {
-  return (
-    <button
-      className={twMerge(
-        'h-8 flex items-center justify-center font-bold p-1 border-2 border-t-app-white border-l-app-white',
-        className
-      )}
-    >
-      Start
-    </button>
-  );
+  return <Button className="mr-1">Start</Button>;
 };
 
 export default Start;

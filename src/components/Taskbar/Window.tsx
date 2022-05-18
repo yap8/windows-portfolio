@@ -1,5 +1,5 @@
-import { twMerge } from 'tailwind-merge';
 import { WindowI } from './Windows';
+import Button from '../Button';
 
 interface WindowProps {
   window: WindowI;
@@ -8,16 +8,9 @@ interface WindowProps {
 const Window: React.FC<WindowProps> = ({ window }) => {
   return (
     <li key={window.id}>
-      <button
-        className={twMerge(
-          'h-8 w-40 flex items-center p-1 border-2 mr-1',
-          window.active
-            ? 'border-b-white border-r-white'
-            : 'border-t-white border-l-white'
-        )}
-      >
+      <Button className="mr-1 w-40" active={window.active}>
         {window.title}
-      </button>
+      </Button>
     </li>
   );
 };
