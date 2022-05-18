@@ -14,7 +14,7 @@ class Programs {
 
     this.programs = [
       { id: 1, title: 'Program 1', active: true },
-      { id: 1, title: 'Program 1', active: false },
+      { id: 2, title: 'Program 2', active: false },
     ];
   }
 
