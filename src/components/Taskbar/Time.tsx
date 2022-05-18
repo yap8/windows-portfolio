@@ -1,7 +1,7 @@
-import React from 'react';
+import Button from '../Button';
 
-const Time = () => {
-  return <div>Time</div>;
+const Time: React.FC = () => {
+  return <Button active={true}>10:38 AM</Button>;
 };
 
 export default Time;

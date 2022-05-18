@@ -1,3 +1,4 @@
+import { twMerge } from 'tailwind-merge';
 import Window from './Window';
 
 export interface WindowI {
@@ -11,9 +12,13 @@ const windows: WindowI[] = [
   { id: 2, title: 'Program 2', active: false },
 ];
 
-const Windows: React.FC = () => {
+interface WindowProps {
+  className?: string;
+}
+
+const Windows: React.FC<WindowProps> = ({ className }) => {
   return (
-    <ul className="flex items-center">
+    <ul className={twMerge('flex items-center', className)}>
       {windows.map((window) => (
         <Window window={window} key={window.id} />
       ))}
