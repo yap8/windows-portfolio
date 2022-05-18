@@ -4,6 +4,7 @@ interface ButtonProps {
   className?: string;
   iconURL?: string;
   active?: boolean;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
   children: React.ReactNode;
 }
 
@@ -12,6 +13,7 @@ const Button: React.FC<ButtonProps> = ({
   iconURL,
   active,
   children,
+  ...props
 }) => {
   return (
     <button
@@ -22,6 +24,7 @@ const Button: React.FC<ButtonProps> = ({
           : 'border-t-white border-l-white',
         className
       )}
+      {...props}
     >
       {iconURL && (
         <div
