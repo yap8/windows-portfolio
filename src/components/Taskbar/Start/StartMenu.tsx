@@ -1,5 +1,6 @@
 import { twMerge } from 'tailwind-merge';
 import programs from '../../../store/programs';
+import start from '../../../store/start';
 
 import StartMenuButton from './StartMenuButton';
 
@@ -10,10 +11,12 @@ interface StartMenuProps {
 const StartMenu: React.FC<StartMenuProps> = ({ active }) => {
   const handleOpenWelcome = () => {
     programs.openWelcome();
+    start.close();
   };
 
   const handleOpenContact = () => {
     programs.openContact();
+    start.close();
   };
 
   return (
