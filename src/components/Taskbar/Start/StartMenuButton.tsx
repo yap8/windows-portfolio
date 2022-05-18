@@ -10,7 +10,10 @@ const StartMenuButton: React.FC<StartMenuButtonProps> = ({
   ...props
 }) => {
   return (
-    <button className="flex items-center p-1" {...props}>
+    <button
+      className="w-full flex items-center p-1 hover:bg-app-blue hover:text-white"
+      {...props}
+    >
       <div
         className="w-8 h-8 mx-2 bg-contain bg-no-repeat bg-center"
         style={{ backgroundImage: `url('${iconURL}')` }}
