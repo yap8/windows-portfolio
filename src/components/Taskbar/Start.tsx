@@ -1,4 +1,5 @@
 import Button from '../Button';
+import StartMenu from './StartMenu';
 
 interface StartProps {
   className?: string;
@@ -6,9 +7,12 @@ interface StartProps {
 
 const Start: React.FC<StartProps> = () => {
   return (
-    <Button className="mr-1" iconURL="images/Windows logo (without text).ico">
-      Start
-    </Button>
+    <div className="mr-1">
+      <StartMenu active={true} />
+      <Button iconURL="images/Windows logo (without text).ico" active={true}>
+        Start
+      </Button>
+    </div>
   );
 };
 
