@@ -2,6 +2,9 @@ import Welcome from './Welcome';
 import Contact from './Contact';
 import About from './About';
 import Projects from './Projects';
+import Portfolio from './Project/Portfolio';
+import Flashcards from './Project/Flashcards';
+import Messenger from './Project/Messenger';
 
 export interface ComponentRoute {
   name: string;
@@ -13,6 +16,9 @@ export const componentRoutes: Array<ComponentRoute> = [
   { name: 'Contact', component: <Contact /> },
   { name: 'About', component: <About /> },
   { name: 'Projects', component: <Projects /> },
+  { name: 'Portfolio', component: <Portfolio /> },
+  { name: 'Flashcards', component: <Flashcards /> },
+  { name: 'Messenger', component: <Messenger /> },
 ];
 
 export const getComponent = (name: string) => {

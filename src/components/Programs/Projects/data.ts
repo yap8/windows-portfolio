@@ -4,16 +4,16 @@ export const shortcuts: Array<ShortcutI> = [
   {
     title: 'Portfolio',
     iconURL: 'images/Help page.ico',
-    program: 'contact',
+    program: 'portfolio',
   },
   {
     title: 'Flashcards',
     iconURL: 'images/Help page.ico',
-    program: 'contact',
+    program: 'flashcards',
   },
   {
     title: 'Messenger',
     iconURL: 'images/Help page.ico',
-    program: 'contact',
+    program: 'messenger',
   },
 ];

@@ -37,4 +37,32 @@ export const projects: Program = {
   component: 'Projects',
 };
 
-export const programs = [welcome, contact, projects];
+export const portfolio: Program = {
+  slug: 'portfolio',
+  title: 'Portfolio',
+  active: false,
+  component: 'Portfolio',
+};
+
+export const flashcards: Program = {
+  slug: 'flashcards',
+  title: 'Flashcards',
+  active: false,
+  component: 'Flashcards',
+};
+
+export const messenger: Program = {
+  slug: 'messenger',
+  title: 'Messenger',
+  active: false,
+  component: 'Messenger',
+};
+
+export const programs = [
+  welcome,
+  contact,
+  projects,
+  portfolio,
+  flashcards,
+  messenger,
+];
