@@ -41,22 +41,4 @@ export const shortcuts: Array<ShortcutI> = [
     iconURL: 'images/Recycle Bin with paper.ico',
     link: 'https://yap8.github.io/portfolio/',
   },
-  ...Array(13).fill({ slug: Math.random() }),
-  ...Array(14).fill({ slug: Math.random() }),
-  ...Array(11).fill({ slug: Math.random() }),
-  {
-    title: 'title',
-    iconURL: 'images/Folder.ico',
-    program: 'folder-1',
-  },
-  {
-    title: 'title',
-    iconURL: 'images/Folder.ico',
-    program: 'folder-2',
-  },
-  {
-    title: 'title',
-    iconURL: 'images/Folder.ico',
-    program: 'folder-3',
-  },
 ];
