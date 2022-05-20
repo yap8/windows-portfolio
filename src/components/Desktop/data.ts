@@ -1,7 +1,8 @@
 export interface Shortcut {
   title: string;
   iconURL: string;
-  program: string;
+  program?: string;
+  link?: string;
 }
 
 export const shortcuts: Array<Shortcut> = [
@@ -25,19 +26,19 @@ export const shortcuts: Array<Shortcut> = [
   {
     title: 'Resume',
     iconURL: 'images/Notepad document.ico',
-    program: 'resume',
+    link: 'https://yap8.github.io/portfolio/Nebozhenko_Frontend_Resume.pdf',
   },
   ...Array(13).fill({ slug: Math.random() }),
   {
     title: 'GitHub',
     iconURL: 'images/User with computer.ico',
-    program: 'github',
+    link: 'https://github.com/yap8',
   },
   ...Array(13).fill({ slug: Math.random() }),
   {
     title: 'Old portfolio',
     iconURL: 'images/Recycle Bin with paper.ico',
-    program: 'old-portfolio',
+    link: 'https://yap8.github.io/portfolio/',
   },
   ...Array(13).fill({ slug: Math.random() }),
   ...Array(14).fill({ slug: Math.random() }),

@@ -7,18 +7,41 @@ interface ShortcutProps {
 const Shortcut: React.FC<ShortcutProps> = ({ shortcut }) => {
   if (!shortcut.title || !shortcut.iconURL) return <li></li>;
 
+  const handleClick = (
+    e: React.MouseEvent<HTMLButtonElement> | React.MouseEvent<HTMLAnchorElement>
+  ) => {
+    // if not doubleclick do not open link/program
+    if (e.detail === 1) e.preventDefault();
+  };
+
   return (
     <li>
-      <button
-        className="h-full w-full flex text-white flex-col items-center text-center p-1 focus:bg-app-blue"
-        onDoubleClick={() => console.log('OPEN')}
-      >
-        <div
-          className="bg-contain bg-center bg-no-repeat h-12 w-12 mb-1"
-          style={{ backgroundImage: `url('${shortcut.iconURL}')` }}
-        />
-        <h4>{shortcut.title}</h4>
-      </button>
+      {shortcut.link ? (
+        <a
+          className="h-full w-full flex text-white flex-col items-center text-center p-1 focus:bg-app-blue"
+          href={shortcut.link}
+          target="_blank"
+          rel="noreferrer"
+          onClick={handleClick}
+        >
+          <div
+            className="bg-contain bg-center bg-no-repeat h-12 w-12 mb-1"
+            style={{ backgroundImage: `url('${shortcut.iconURL}')` }}
+          />
+          <h4>{shortcut.title}</h4>
+        </a>
+      ) : (
+        <button
+          className="h-full w-full flex text-white flex-col items-center text-center p-1 focus:bg-app-blue"
+          onClick={handleClick}
+        >
+          <div
+            className="bg-contain bg-center bg-no-repeat h-12 w-12 mb-1"
+            style={{ backgroundImage: `url('${shortcut.iconURL}')` }}
+          />
+          <h4>{shortcut.title}</h4>
+        </button>
+      )}
     </li>
   );
 };
