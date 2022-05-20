@@ -3,11 +3,11 @@ import Button from '../../Button';
 
 const Welcome = () => {
   return (
-    <div className="flex flex-col h-full">
+    <div className="h-full flex flex-col">
       <h2 className="text-2xl font-semibold mb-2">
         Welcome to my <b>Portfolio</b>
       </h2>
-      <div className="h-full flex">
+      <div className="flex-1 flex">
         <div className="flex p-5 bg-app-yellow mr-4 border border-black">
           <div className="mr-4">
             <div

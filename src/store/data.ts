@@ -8,7 +8,7 @@ export const welcome: Program = {
   width: 640,
   height: 380,
   minWidth: 400,
-  minHeight: 320,
+  minHeight: 340,
   maxWidth: 640,
   maxHeight: 380,
   active: true,

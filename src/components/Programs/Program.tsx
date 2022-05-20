@@ -50,7 +50,7 @@ const Program: React.FC<ProgramProps> = ({
             &#10006;
           </Button>
         </header>
-        <div className="h-full p-4">{component}</div>
+        <div className="flex-1 p-4">{component}</div>
       </div>
     </Rnd>
   );
