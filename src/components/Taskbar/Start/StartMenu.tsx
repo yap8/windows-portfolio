@@ -10,13 +10,8 @@ interface StartMenuProps {
 }
 
 const StartMenu: React.FC<StartMenuProps> = ({ active }) => {
-  const handleOpenWelcome = () => {
-    programs.openProgram('welcome');
-    start.close();
-  };
-
-  const handleOpenContact = () => {
-    programs.openProgram('contact');
+  const handleOpen = (program: string) => {
+    programs.openProgram(program);
     start.close();
   };
 
@@ -38,19 +33,19 @@ const StartMenu: React.FC<StartMenuProps> = ({ active }) => {
           <SubMenu toggleButtonText="Projects">
             <StartMenuButton
               iconURL="images/Help page.ico"
-              onClick={() => programs.openProgram('portfolio')}
+              onClick={() => handleOpen('portfolio')}
             >
               Portfolio
             </StartMenuButton>
             <StartMenuButton
               iconURL="images/Help page.ico"
-              onClick={() => programs.openProgram('flashcards')}
+              onClick={() => handleOpen('flashcards')}
             >
               Flashcards
             </StartMenuButton>
             <StartMenuButton
               iconURL="images/Help page.ico"
-              onClick={() => programs.openProgram('messenger')}
+              onClick={() => handleOpen('messenger')}
             >
               Messenger
             </StartMenuButton>
@@ -59,7 +54,7 @@ const StartMenu: React.FC<StartMenuProps> = ({ active }) => {
         <li>
           <StartMenuButton
             iconURL="images/Help book.ico"
-            onClick={handleOpenWelcome}
+            onClick={() => handleOpen('welcome')}
           >
             Welcome
           </StartMenuButton>
@@ -67,7 +62,7 @@ const StartMenu: React.FC<StartMenuProps> = ({ active }) => {
         <li>
           <StartMenuButton
             iconURL="images/Mail.ico"
-            onClick={handleOpenContact}
+            onClick={() => handleOpen('contact')}
           >
             Contact
           </StartMenuButton>
