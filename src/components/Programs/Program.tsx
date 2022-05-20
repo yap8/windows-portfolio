@@ -20,7 +20,7 @@ const Program: React.FC<ProgramProps> = ({
   return (
     <Rnd
       className={twMerge(
-        'flex flex-col p-0.5 border-2 border-t-white border-l-white border-r-black border-b-black bg-app-gray absolute',
+        'border-t-white border-2 border-l-white border-r-black border-b-black bg-app-gray',
         program.active && 'z-10'
       )}
       default={{
@@ -36,16 +36,18 @@ const Program: React.FC<ProgramProps> = ({
       maxHeight={program.maxHeight}
       onMouseDown={() => handleActive(program.slug)}
     >
-      <header className="handle cursor-grab flex justify-between bg-app-blue text-white p-1">
-        <h2 className="mr-4">{program.title}</h2>
-        <Button
-          className="justify-center w-6 h-6 text-black font-bold"
-          onClick={() => handleClose(program.slug)}
-        >
-          &#10006;
-        </Button>
-      </header>
-      <div className="p-4">{component}</div>
+      <div className="h-full flex flex-col p-0.5">
+        <header className="handle cursor-grab flex justify-between bg-app-blue text-white p-1">
+          <h2 className="mr-4">{program.title}</h2>
+          <Button
+            className="justify-center w-6 h-6 text-black font-bold"
+            onClick={() => handleClose(program.slug)}
+          >
+            &#10006;
+          </Button>
+        </header>
+        <div className="h-full p-4">{component}</div>
+      </div>
     </Rnd>
   );
 };
