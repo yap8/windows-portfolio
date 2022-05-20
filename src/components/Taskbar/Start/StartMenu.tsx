@@ -43,7 +43,7 @@ const StartMenu: React.FC<StartMenuProps> = ({ active }) => {
             iconURL="images/Help book.ico"
             onClick={handleOpenWelcome}
           >
-            Help
+            Welcome
           </StartMenuButton>
         </li>
         <li>
