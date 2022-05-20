@@ -1,5 +1,11 @@
 import programs from '../store/programs';
-import { Shortcut as ShortcutI } from './Desktop/data';
+
+export interface ShortcutI {
+  title: string;
+  iconURL: string;
+  program?: string;
+  link?: string;
+}
 
 interface ShortcutProps {
   shortcut: ShortcutI;
@@ -24,7 +30,7 @@ const Shortcut: React.FC<ShortcutProps> = ({ shortcut }) => {
     <li>
       {shortcut.link ? (
         <a
-          className="h-full w-full flex text-white flex-col items-center text-center p-1 focus:bg-app-blue"
+          className="h-full w-full flex text-white flex-col items-center text-center p-2 focus:bg-app-blue"
           href={shortcut.link}
           target="_blank"
           rel="noreferrer"
@@ -38,7 +44,7 @@ const Shortcut: React.FC<ShortcutProps> = ({ shortcut }) => {
         </a>
       ) : (
         <button
-          className="h-full w-full flex text-white flex-col items-center text-center p-1 focus:bg-app-blue"
+          className="h-full w-full flex text-white flex-col items-center text-center p-2 focus:bg-app-blue"
           onClick={(e) => handleClick(e, shortcut.program)}
         >
           <div

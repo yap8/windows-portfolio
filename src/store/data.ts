@@ -26,4 +26,15 @@ export const contact: Program = {
   component: 'Contact',
 };
 
-export const programs = [welcome, contact];
+export const projects: Program = {
+  slug: 'projects',
+  title: 'Projects',
+  minWidth: 520,
+  minHeight: 320,
+  maxWidth: 520,
+  maxHeight: 320,
+  active: false,
+  component: 'Projects',
+};
+
+export const programs = [welcome, contact, projects];

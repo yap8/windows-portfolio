@@ -1,11 +1,6 @@
-export interface Shortcut {
-  title: string;
-  iconURL: string;
-  program?: string;
-  link?: string;
-}
+import { ShortcutI } from '../Shortcut';
 
-export const shortcuts: Array<Shortcut> = [
+export const shortcuts: Array<ShortcutI> = [
   {
     title: 'Projects',
     iconURL: 'images/Folder.ico',
