@@ -29,6 +29,10 @@ const Program: React.FC<ProgramProps> = ({
         width: program.width || 500,
         height: program.height || 190,
       }}
+      enableResizing={
+        program.minWidth !== program.maxWidth &&
+        program.minHeight !== program.maxHeight
+      }
       dragHandleClassName="handle"
       minWidth={program.minWidth || 640}
       minHeight={program.minHeight || 320}
