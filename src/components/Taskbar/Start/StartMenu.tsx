@@ -1,8 +1,9 @@
 import { twMerge } from 'tailwind-merge';
+
 import programs from '../../../store/programs';
 import start from '../../../store/start';
-
 import StartMenuButton from './StartMenuButton';
+import SubMenu from './SubMenu';
 
 interface StartMenuProps {
   active?: boolean;
@@ -22,7 +23,7 @@ const StartMenu: React.FC<StartMenuProps> = ({ active }) => {
   return (
     <div
       className={twMerge(
-        'absolute bottom-10 left-1 border-2 border-black border-t-white border-l-white bg-app-gray',
+        'absolute bottom-10 left-1 border-2 border-black border-t-white border-l-white',
         active ? 'flex' : 'hidden'
       )}
     >
@@ -34,9 +35,26 @@ const StartMenu: React.FC<StartMenuProps> = ({ active }) => {
       </div>
       <ul>
         <li>
-          <StartMenuButton iconURL="images/Folder.ico">
-            Programs
-          </StartMenuButton>
+          <SubMenu toggleButtonText="Projects">
+            <StartMenuButton
+              iconURL="images/Help page.ico"
+              onClick={() => programs.openProgram('portfolio')}
+            >
+              Portfolio
+            </StartMenuButton>
+            <StartMenuButton
+              iconURL="images/Help page.ico"
+              onClick={() => programs.openProgram('flashcards')}
+            >
+              Flashcards
+            </StartMenuButton>
+            <StartMenuButton
+              iconURL="images/Help page.ico"
+              onClick={() => programs.openProgram('messenger')}
+            >
+              Messenger
+            </StartMenuButton>
+          </SubMenu>
         </li>
         <li>
           <StartMenuButton

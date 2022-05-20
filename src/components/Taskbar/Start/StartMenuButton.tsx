@@ -1,6 +1,8 @@
 interface StartMenuButtonProps {
   iconURL: string;
   onClick?: () => void;
+  onFocus?: () => void;
+  onBlur?: () => void;
   children: React.ReactNode;
 }
 
@@ -11,7 +13,7 @@ const StartMenuButton: React.FC<StartMenuButtonProps> = ({
 }) => {
   return (
     <button
-      className="w-full flex items-center p-1 hover:bg-app-blue hover:text-white"
+      className="w-48 flex items-center p-1 bg-app-gray hover:bg-app-blue hover:text-white focus:bg-app-blue focus:text-white"
       {...props}
     >
       <div
