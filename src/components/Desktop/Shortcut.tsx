@@ -1,3 +1,4 @@
+import programs from '../../store/programs';
 import { Shortcut as ShortcutI } from './data';
 
 interface ShortcutProps {
@@ -8,10 +9,15 @@ const Shortcut: React.FC<ShortcutProps> = ({ shortcut }) => {
   if (!shortcut.title || !shortcut.iconURL) return <li></li>;
 
   const handleClick = (
-    e: React.MouseEvent<HTMLButtonElement> | React.MouseEvent<HTMLAnchorElement>
+    e:
+      | React.MouseEvent<HTMLButtonElement>
+      | React.MouseEvent<HTMLAnchorElement>,
+    program?: string
   ) => {
     // if not doubleclick do not open link/program
-    if (e.detail === 1) e.preventDefault();
+    if (e.detail === 1) return e.preventDefault();
+
+    if (program) programs.openProgram(program);
   };
 
   return (
@@ -33,7 +39,7 @@ const Shortcut: React.FC<ShortcutProps> = ({ shortcut }) => {
       ) : (
         <button
           className="h-full w-full flex text-white flex-col items-center text-center p-1 focus:bg-app-blue"
-          onClick={handleClick}
+          onClick={(e) => handleClick(e, shortcut.program)}
         >
           <div
             className="bg-contain bg-center bg-no-repeat h-12 w-12 mb-1"
