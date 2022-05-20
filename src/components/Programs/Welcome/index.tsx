@@ -1,12 +1,13 @@
 import programs from '../../../store/programs';
 import Button from '../../Button';
+import Title from '../../Title';
 
 const Welcome = () => {
   return (
     <div className="h-full flex flex-col">
-      <h2 className="text-2xl font-semibold mb-2">
+      <Title>
         Welcome to my <b>Portfolio</b>
-      </h2>
+      </Title>
       <div className="flex-1 flex">
         <div className="flex p-5 bg-app-yellow mr-4 border border-black">
           <div className="mr-4">

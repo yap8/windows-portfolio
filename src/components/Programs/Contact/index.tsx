@@ -1,11 +1,10 @@
+import Title from '../../Title';
 import Form from './Form';
 
 const Contact = () => {
   return (
     <div>
-      <h2 className="text-xl font-semibold mb-2">
-        Hi and thanks for checking out my website!
-      </h2>
+      <Title>Hi and thanks for checking out my website!</Title>
       <p className="mb-2">
         If you feel like contacting me feel free to send me an email{' '}
         <a
