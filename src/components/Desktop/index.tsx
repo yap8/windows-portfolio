@@ -1,5 +1,5 @@
 import { shortcuts } from './data';
-import Shortcut from './Shortcut';
+import Shortcut from '../Shortcut';
 
 const Desktop: React.FC = () => {
   return (

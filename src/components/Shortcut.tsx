@@ -1,5 +1,5 @@
-import programs from '../../store/programs';
-import { Shortcut as ShortcutI } from './data';
+import programs from '../store/programs';
+import { Shortcut as ShortcutI } from './Desktop/data';
 
 interface ShortcutProps {
   shortcut: ShortcutI;
