@@ -58,6 +58,13 @@ export const messenger: Program = {
   component: 'Messenger',
 };
 
+export const about: Program = {
+  slug: 'about',
+  title: 'About',
+  active: false,
+  component: 'About',
+};
+
 export const programs = [
   welcome,
   contact,
@@ -65,4 +72,5 @@ export const programs = [
   portfolio,
   flashcards,
   messenger,
+  about,
 ];

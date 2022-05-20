@@ -13,9 +13,9 @@ export const shortcuts: Array<ShortcutI> = [
     program: 'language',
   },
   {
-    title: 'Contact',
-    iconURL: 'images/Mail.ico',
-    program: 'contact',
+    title: 'About me',
+    iconURL: 'images/User documents.ico',
+    program: 'about',
   },
   ...Array(13).fill({ slug: Math.random() }),
   {
@@ -31,12 +31,17 @@ export const shortcuts: Array<ShortcutI> = [
   },
   ...Array(13).fill({ slug: Math.random() }),
   {
+    title: 'Contact',
+    iconURL: 'images/Mail.ico',
+    program: 'contact',
+  },
+  ...Array(13).fill({ slug: Math.random() }),
+  {
     title: 'Old portfolio',
     iconURL: 'images/Recycle Bin with paper.ico',
     link: 'https://yap8.github.io/portfolio/',
   },
   ...Array(13).fill({ slug: Math.random() }),
-  ...Array(14).fill({ slug: Math.random() }),
   ...Array(14).fill({ slug: Math.random() }),
   ...Array(11).fill({ slug: Math.random() }),
   {
