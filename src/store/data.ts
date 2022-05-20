@@ -1,15 +1,19 @@
-export const welcome = {
+import { Program } from './programs';
+
+export const welcome: Program = {
   slug: 'welcome',
   title: 'Welcome',
+  x: 600,
+  y: 300,
   minWidth: 400,
   minHeight: 320,
   maxWidth: 640,
-  maxHeight: 320,
+  maxHeight: 380,
   active: true,
   component: 'Welcome',
 };
 
-export const contact = {
+export const contact: Program = {
   slug: 'contact',
   title: 'Contact',
   minWidth: 520,

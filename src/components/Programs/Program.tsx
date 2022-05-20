@@ -23,6 +23,12 @@ const Program: React.FC<ProgramProps> = ({
         'flex flex-col p-0.5 border-2 border-t-white border-l-white border-r-black border-b-black bg-app-gray absolute',
         program.active && 'z-10'
       )}
+      default={{
+        x: program.x || 500,
+        y: program.y || 200,
+        width: program.width || 500,
+        height: program.height || 190,
+      }}
       dragHandleClassName="handle"
       minWidth={program.minWidth || 640}
       minHeight={program.minHeight || 320}

@@ -1,10 +1,14 @@
 import { makeAutoObservable } from 'mobx';
 
-import { welcome, programs } from '../data';
+import { welcome, programs } from './data';
 
 export interface Program {
   slug: string;
   title: string;
+  x?: number;
+  y?: number;
+  width?: number;
+  height?: number;
   minWidth?: number;
   minHeight?: number;
   maxWidth?: number;
