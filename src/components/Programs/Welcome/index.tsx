@@ -26,7 +26,12 @@ const Welcome = () => {
         </div>
         <div className="flex flex-col flex-1">
           <Button className="mb-2 justify-center">About me</Button>
-          <Button className="mb-2 justify-center">Projects</Button>
+          <Button
+            className="mb-2 justify-center"
+            onClick={() => programs.openProgram('projects')}
+          >
+            Projects
+          </Button>
           <a
             className="block w-full mb-2"
             href="https://github.com/yap8"
