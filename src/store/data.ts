@@ -5,6 +5,8 @@ export const welcome: Program = {
   title: 'Welcome',
   x: 600,
   y: 300,
+  width: 640,
+  height: 380,
   minWidth: 400,
   minHeight: 320,
   maxWidth: 640,
