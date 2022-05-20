@@ -4,7 +4,7 @@ import Form from './Form';
 const Contact = () => {
   return (
     <div>
-      <Title>Hi and thanks for checking out my website!</Title>
+      <Title>Thanks for checking out my website!</Title>
       <p className="mb-2">
         If you feel like contacting me feel free to send me an email{' '}
         <a
