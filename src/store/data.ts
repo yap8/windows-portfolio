@@ -61,6 +61,10 @@ export const messenger: Program = {
 export const about: Program = {
   slug: 'about',
   title: 'About',
+  minWidth: 470,
+  minHeight: 480,
+  maxWidth: 780,
+  maxHeight: 540,
   active: false,
   component: 'About',
 };
