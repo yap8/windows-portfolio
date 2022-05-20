@@ -25,7 +25,12 @@ const Welcome = () => {
           </div>
         </div>
         <div className="flex flex-col flex-1">
-          <Button className="mb-2 justify-center">About me</Button>
+          <Button
+            className="mb-2 justify-center"
+            onClick={() => programs.openProgram('about')}
+          >
+            About me
+          </Button>
           <Button
             className="mb-2 justify-center"
             onClick={() => programs.openProgram('projects')}
