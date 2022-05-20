@@ -18,7 +18,9 @@ const Welcome = () => {
           <div>
             <h3 className="font-semibold mb-4">Did you know...</h3>
             <p className="max-w-xs">
-              To open a program, you just doubleclick an icon.
+              To open a program, you just <b>doubleclick</b> an icon. Also don't
+              forget to click all the buttons on the right. Hope you enjoy the
+              website!
             </p>
           </div>
         </div>
