@@ -3,17 +3,17 @@ import { ShortcutI } from '../../Shortcut';
 export const shortcuts: Array<ShortcutI> = [
   {
     title: 'Portfolio',
-    iconURL: 'images/Earth (16 colors).ico',
+    iconURL: 'images/Computer Input.ico',
     program: 'contact',
   },
   {
     title: 'Flashcards',
-    iconURL: 'images/Earth (16 colors).ico',
+    iconURL: 'images/Book.ico',
     program: 'contact',
   },
   {
     title: 'Messenger',
-    iconURL: 'images/Earth (16 colors).ico',
+    iconURL: 'images/Chat.ico',
     program: 'contact',
   },
 ];
