@@ -1,6 +1,6 @@
-import { twMerge } from 'tailwind-merge';
-import { useState } from 'react';
-import StartMenuButton from './StartMenuButton';
+import { twMerge } from "tailwind-merge";
+import { useState } from "react";
+import StartMenuButton from "./StartMenuButton";
 
 interface SubMenuProps {
   toggleButtonText: string;
@@ -11,7 +11,7 @@ const SubMenu: React.FC<SubMenuProps> = ({ toggleButtonText, children }) => {
   const [focused, setFocused] = useState(false);
 
   const onFocus = () => setFocused(true);
-  const onBlur = () => setTimeout(() => setFocused(false), 100);
+  const onBlur = () => setTimeout(() => setFocused(false), 1000);
 
   return (
     <div className="relative">
@@ -24,8 +24,8 @@ const SubMenu: React.FC<SubMenuProps> = ({ toggleButtonText, children }) => {
       </StartMenuButton>
       <div
         className={twMerge(
-          'hidden absolute left-48 top-0 -mt-0.5 border-2 border-black border-t-white border-l-0',
-          focused && 'block'
+          "hidden absolute left-48 top-0 -mt-0.5 border-2 border-black border-t-white border-l-0",
+          focused && "block"
         )}
       >
         {children}
