@@ -1,8 +1,8 @@
-import { Program } from './programs';
+import { Program } from "./programs";
 
 export const welcome: Program = {
-  slug: 'welcome',
-  title: 'Welcome',
+  slug: "welcome",
+  title: "Welcome",
   x: 350,
   y: 150,
   width: 640,
@@ -12,12 +12,12 @@ export const welcome: Program = {
   maxWidth: 640,
   maxHeight: 380,
   active: true,
-  component: 'Welcome',
+  component: "Welcome",
 };
 
 export const contact: Program = {
-  slug: 'contact',
-  title: 'Contact',
+  slug: "contact",
+  title: "Contact",
   x: 400,
   y: 100,
   minWidth: 520,
@@ -25,57 +25,60 @@ export const contact: Program = {
   maxWidth: 520,
   maxHeight: 440,
   active: false,
-  component: 'Contact',
+  component: "Contact",
 };
 
 export const projects: Program = {
-  slug: 'projects',
-  title: 'Projects',
+  slug: "projects",
+  title: "Projects",
   minWidth: 520,
   minHeight: 320,
   maxWidth: 520,
   maxHeight: 320,
   active: false,
-  component: 'Projects',
+  component: "Projects",
 };
 
 export const portfolio: Program = {
-  slug: 'portfolio',
-  title: 'Portfolio',
+  slug: "portfolio",
+  title: "Portfolio",
+  x: 100,
   minWidth: 480,
   minHeight: 580,
   active: false,
-  component: 'Portfolio',
+  component: "Portfolio",
 };
 
 export const flashcards: Program = {
-  slug: 'flashcards',
-  title: 'Flashcards',
+  slug: "flashcards",
+  title: "Flashcards",
+  x: 100,
   minWidth: 520,
   minHeight: 600,
   active: false,
-  component: 'Flashcards',
+  component: "Flashcards",
 };
 
 export const messenger: Program = {
-  slug: 'messenger',
-  title: 'Messenger',
-  minWidth: 480,
+  slug: "messenger",
+  title: "Messenger",
+  x: 100,
+  minWidth: 540,
   minHeight: 580,
   active: false,
-  component: 'Messenger',
+  component: "Messenger",
 };
 
 export const about: Program = {
-  slug: 'about',
-  title: 'About',
+  slug: "about",
+  title: "About",
   x: 450,
   minWidth: 480,
   minHeight: 440,
   maxWidth: 780,
   maxHeight: 580,
   active: false,
-  component: 'About',
+  component: "About",
 };
 
 export const programs = [
