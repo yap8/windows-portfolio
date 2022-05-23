@@ -59,3 +59,11 @@ export const messenger: Project = {
     { text: "Demo", link: "http://h91115tq.beget.tech/" },
   ],
 };
+
+export const portfolio: Project = {
+  title: "Portfolio",
+  text: "The app you're currently using. Go ahead and explore it.",
+  screenshots: ["images/Book.ico", "images/Folder.ico"],
+  technologies: ["TypeScript", "React", "MobX", "Tailwind CSS"],
+  links: [{ text: "Repo", link: "https://github.com/yap8/windows-portfolio" }],
+};
