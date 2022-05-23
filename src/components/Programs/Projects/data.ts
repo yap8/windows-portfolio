@@ -48,3 +48,14 @@ export const flashcards: Project = {
     { text: "Demo", link: "https://yap-flashcards.herokuapp.com/" },
   ],
 };
+
+export const messenger: Project = {
+  title: "Messenger",
+  text: "A fullstack app made with React & PHP. The user can create an account and send messages to other users. The UI is customizable as you can toggle dark theme, change background and spinner color.",
+  screenshots: ["images/Book.ico", "images/Folder.ico"],
+  technologies: ["React", "Redux", "Tailwind CSS", "PHP", "Slim", "MySQL"],
+  links: [
+    { text: "Repo", link: "https://github.com/yap8/messenger" },
+    { text: "Demo", link: "http://h91115tq.beget.tech/" },
+  ],
+};
