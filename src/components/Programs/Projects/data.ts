@@ -1,19 +1,50 @@
-import { ShortcutI } from '../../Shortcut';
+import { ShortcutI } from "../../Shortcut";
+
+export interface Link {
+  text: string;
+  link: string;
+}
+
+export interface Project {
+  screenshots: Array<string>;
+  title: string;
+  text: string;
+  technologies: Array<string>;
+  links: Array<Link>;
+}
 
 export const shortcuts: Array<ShortcutI> = [
   {
-    title: 'Portfolio',
-    iconURL: 'images/Help page.ico',
-    program: 'portfolio',
+    title: "Portfolio",
+    iconURL: "images/Help page.ico",
+    program: "portfolio",
   },
   {
-    title: 'Flashcards',
-    iconURL: 'images/Help page.ico',
-    program: 'flashcards',
+    title: "Flashcards",
+    iconURL: "images/Help page.ico",
+    program: "flashcards",
   },
   {
-    title: 'Messenger',
-    iconURL: 'images/Help page.ico',
-    program: 'messenger',
+    title: "Messenger",
+    iconURL: "images/Help page.ico",
+    program: "messenger",
   },
 ];
+
+export const flashcards: Project = {
+  title: "Flashcards",
+  text: "A fullstack MERN app. The user can create an account and add and later update collections of flashcards that can be used to help remember information.",
+  screenshots: ["images/Book.ico", "images/Chat.ico", "images/Folder.ico"],
+  technologies: [
+    "React",
+    "Redux",
+    "Tailwind CSS",
+    "Node.js",
+    "Express",
+    "MongoDB",
+  ],
+  links: [
+    { text: "Repo", link: "https://github.com/yap8/flashcards" },
+    { text: "Demo", link: "https://yap-flashcards.herokuapp.com/" },
+  ],
+};
