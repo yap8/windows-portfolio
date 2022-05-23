@@ -13,6 +13,14 @@ const Flashcards = () => {
       screenshots={screenshots}
       title="Flashcards"
       text="A fullstack MERN app. The user can create an account and add and later update collections of flashcards that can be used to help remember information."
+      technologies={[
+        "React",
+        "Redux",
+        "Tailwind CSS",
+        "Node.js",
+        "Express",
+        "MongoDB",
+      ]}
       links={links}
     />
   );

@@ -47,8 +47,8 @@ export const portfolio: Program = {
 export const flashcards: Program = {
   slug: 'flashcards',
   title: 'Flashcards',
-  minWidth: 480,
-  minHeight: 580,
+  minWidth: 520,
+  minHeight: 600,
   active: false,
   component: 'Flashcards',
 };

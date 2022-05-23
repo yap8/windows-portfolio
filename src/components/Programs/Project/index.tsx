@@ -1,6 +1,7 @@
 import Button from "../../Button";
 import Title from "../../Title";
 import Screenshots from "./Screenshots";
+import Technologies from "./Technologies";
 
 interface Link {
   text: string;
@@ -11,6 +12,7 @@ interface ProjectProps {
   screenshots: Array<string>;
   title: string;
   text: string;
+  technologies: Array<string>;
   links: Array<Link>;
 }
 
@@ -18,13 +20,15 @@ const Project: React.FC<ProjectProps> = ({
   screenshots,
   title,
   text,
+  technologies,
   links,
 }) => {
   return (
     <div className="flex flex-col h-full">
       <Screenshots screenshots={screenshots} />
       <Title>{title}</Title>
-      <p>{text}</p>
+      <Technologies technologies={technologies} />
+      <p className="mb-3">{text}</p>
       <ul className="flex mt-auto">
         {links.map((link) => (
           <li className="mr-2">
