@@ -1,8 +1,8 @@
-import { Rnd } from 'react-rnd';
-import { twMerge } from 'tailwind-merge';
+import { Rnd } from "react-rnd";
+import { twMerge } from "tailwind-merge";
 
-import { Program as ProgramInterface } from '../../store/programs';
-import Button from '../Button';
+import { Program as ProgramInterface } from "../../store/programs";
+import Button from "../Button";
 
 interface ProgramProps {
   program: ProgramInterface;
@@ -20,12 +20,12 @@ const Program: React.FC<ProgramProps> = ({
   return (
     <Rnd
       className={twMerge(
-        'border-t-white border-2 border-l-white border-r-black border-b-black bg-app-gray',
-        program.active && 'z-10'
+        "border-t-white border-2 border-l-white border-r-black border-b-black bg-app-gray",
+        program.active && "z-10"
       )}
       default={{
-        x: program.x || 500,
-        y: program.y || 200,
+        x: program.x || 350,
+        y: program.y || 150,
         width: program.width || 500,
         height: program.height || 190,
       }}

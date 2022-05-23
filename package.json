@@ -1,6 +1,5 @@
 {
   "name": "windows-portfolio",
-  "homepage": "https://yap8.github.io/windows-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

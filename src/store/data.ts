@@ -3,8 +3,6 @@ import { Program } from './programs';
 export const welcome: Program = {
   slug: 'welcome',
   title: 'Welcome',
-  x: 600,
-  y: 300,
   width: 640,
   height: 380,
   minWidth: 400,
@@ -40,6 +38,8 @@ export const projects: Program = {
 export const portfolio: Program = {
   slug: 'portfolio',
   title: 'Portfolio',
+  minWidth: 480,
+  minHeight: 580,
   active: false,
   component: 'Portfolio',
 };
@@ -47,6 +47,8 @@ export const portfolio: Program = {
 export const flashcards: Program = {
   slug: 'flashcards',
   title: 'Flashcards',
+  minWidth: 480,
+  minHeight: 580,
   active: false,
   component: 'Flashcards',
 };
@@ -54,6 +56,8 @@ export const flashcards: Program = {
 export const messenger: Program = {
   slug: 'messenger',
   title: 'Messenger',
+  minWidth: 480,
+  minHeight: 580,
   active: false,
   component: 'Messenger',
 };
@@ -61,8 +65,8 @@ export const messenger: Program = {
 export const about: Program = {
   slug: 'about',
   title: 'About',
-  minWidth: 470,
-  minHeight: 480,
+  minWidth: 480,
+  minHeight: 640,
   maxWidth: 780,
   maxHeight: 540,
   active: false,
