@@ -1,4 +1,4 @@
-import Project from "./";
+import Project from "../Project";
 
 const links = [
   { text: "Repo", link: "https://github.com/yap8/flashcards" },
