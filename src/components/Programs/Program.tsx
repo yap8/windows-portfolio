@@ -24,8 +24,8 @@ const Program: React.FC<ProgramProps> = ({
         program.active && "z-10"
       )}
       default={{
-        x: program.x || 350,
-        y: program.y || 150,
+        x: program.x || 50,
+        y: program.y || 50,
         width: program.width || 500,
         height: program.height || 190,
       }}

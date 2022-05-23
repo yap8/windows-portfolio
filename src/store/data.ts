@@ -3,6 +3,8 @@ import { Program } from './programs';
 export const welcome: Program = {
   slug: 'welcome',
   title: 'Welcome',
+  x: 350,
+  y: 150,
   width: 640,
   height: 380,
   minWidth: 400,
@@ -16,6 +18,8 @@ export const welcome: Program = {
 export const contact: Program = {
   slug: 'contact',
   title: 'Contact',
+  x: 400,
+  y: 100,
   minWidth: 520,
   minHeight: 440,
   maxWidth: 520,
@@ -65,10 +69,11 @@ export const messenger: Program = {
 export const about: Program = {
   slug: 'about',
   title: 'About',
+  x: 450,
   minWidth: 480,
-  minHeight: 640,
+  minHeight: 440,
   maxWidth: 780,
-  maxHeight: 540,
+  maxHeight: 580,
   active: false,
   component: 'About',
 };
