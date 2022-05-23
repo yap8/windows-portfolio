@@ -18,7 +18,7 @@ const Screenshots: React.FC<ScreenshotsProps> = ({ screenshots }) => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex mb-2">
       <Button className="h-full mr-2" onClick={handlePrev}>
         {"<"}
       </Button>
