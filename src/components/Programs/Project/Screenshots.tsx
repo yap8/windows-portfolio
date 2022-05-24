@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { twMerge } from "tailwind-merge";
-import Button from "../../Button";
+import { useState } from 'react';
+import { twMerge } from 'tailwind-merge';
+import Button from '../../Button';
 
 interface ScreenshotsProps {
   screenshots: Array<string>;
@@ -20,14 +20,14 @@ const Screenshots: React.FC<ScreenshotsProps> = ({ screenshots }) => {
   return (
     <div className="flex mb-2">
       <Button className="h-full mr-2" onClick={handlePrev}>
-        {"<"}
+        {'<'}
       </Button>
-      <ul className="h-72 flex-1 relative">
+      <ul className="h-96 flex-1 relative">
         {screenshots.map((screenshot, index) => (
           <li
             className={twMerge(
-              "bg-app-darkgray h-full w-full absolute left-0 top-0",
-              current === index && "z-10"
+              'bg-app-darkgray h-full w-full absolute left-0 top-0',
+              current === index && 'z-10'
             )}
           >
             <img
@@ -39,7 +39,7 @@ const Screenshots: React.FC<ScreenshotsProps> = ({ screenshots }) => {
         ))}
       </ul>
       <Button className="h-full ml-2" onClick={handleNext}>
-        {">"}
+        {'>'}
       </Button>
     </div>
   );
