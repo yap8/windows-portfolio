@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/windows-portfolio/static/css/main.5a9923cb.css",
-    "main.js": "/windows-portfolio/static/js/main.7d534917.js",
+    "main.css": "/windows-portfolio/static/css/main.5ae07cf8.css",
+    "main.js": "/windows-portfolio/static/js/main.624967ad.js",
     "index.html": "/windows-portfolio/index.html",
-    "main.5a9923cb.css.map": "/windows-portfolio/static/css/main.5a9923cb.css.map",
-    "main.7d534917.js.map": "/windows-portfolio/static/js/main.7d534917.js.map"
+    "main.5ae07cf8.css.map": "/windows-portfolio/static/css/main.5ae07cf8.css.map",
+    "main.624967ad.js.map": "/windows-portfolio/static/js/main.624967ad.js.map"
   },
   "entrypoints": [
-    "static/css/main.5a9923cb.css",
-    "static/js/main.7d534917.js"
+    "static/css/main.5ae07cf8.css",
+    "static/js/main.624967ad.js"
   ]
 }
