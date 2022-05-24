@@ -44,7 +44,7 @@ export const portfolio: Program = {
   title: 'Portfolio',
   x: 100,
   minWidth: 480,
-  minHeight: 720,
+  minHeight: 320,
   active: false,
   component: 'Portfolio',
 };

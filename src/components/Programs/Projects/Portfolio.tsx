@@ -1,5 +1,5 @@
-import Project from "../Project";
-import { portfolio } from "./data";
+import Project from '../Project';
+import { portfolio } from './data';
 
 const Portfolio = () => {
   return (

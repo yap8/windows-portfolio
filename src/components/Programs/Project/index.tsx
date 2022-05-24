@@ -1,7 +1,7 @@
-import Button from "../../Button";
-import Title from "../../Title";
-import Screenshots from "./Screenshots";
-import Technologies from "./Technologies";
+import Button from '../../Button';
+import Title from '../../Title';
+import Screenshots from './Screenshots';
+import Technologies from './Technologies';
 
 interface Link {
   text: string;
@@ -9,7 +9,7 @@ interface Link {
 }
 
 interface ProjectProps {
-  screenshots: Array<string>;
+  screenshots?: Array<string>;
   title: string;
   text: string;
   technologies: Array<string>;
@@ -25,7 +25,7 @@ const Project: React.FC<ProjectProps> = ({
 }) => {
   return (
     <div className="flex flex-col h-full">
-      <Screenshots screenshots={screenshots} />
+      {screenshots && <Screenshots screenshots={screenshots} />}
       <Title>{title}</Title>
       <Technologies technologies={technologies} />
       <p className="mb-3">{text}</p>
