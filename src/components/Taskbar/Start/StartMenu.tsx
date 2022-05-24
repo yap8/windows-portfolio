@@ -61,20 +61,28 @@ const StartMenu: React.FC<StartMenuProps> = ({ active }) => {
         </li>
         <li>
           <StartMenuButton
+            iconURL="images/User documents.ico"
+            onClick={() => handleOpen('about')}
+          >
+            About me
+          </StartMenuButton>
+        </li>
+        <li>
+          <StartMenuButton
             iconURL="images/Mail.ico"
             onClick={() => handleOpen('contact')}
           >
             Contact
           </StartMenuButton>
         </li>
-        <li>
+        {/* <li>
           <StartMenuButton
             iconURL="images/Turn Off Computer (display only).ico"
             onClick={() => window.close()}
           >
             Shut down
           </StartMenuButton>
-        </li>
+        </li> */}
       </ul>
     </div>
   );
