@@ -1,7 +1,7 @@
 
 # FlashCards
 
-Portfolio made in windows 95 style. Thanks for this awesome idea to [Erik Pak](https://github.com/ericpak)!
+Portfolio made in windows 95 style. Thanks for this awesome idea to [Eric Pak](https://github.com/ericpak)!
 
 ## Table of contents
 - [FlashCards](#flashcards)
