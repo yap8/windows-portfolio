@@ -34,7 +34,14 @@ export const shortcuts: Array<ShortcutI> = [
 export const flashcards: Project = {
   title: 'Flashcards',
   text: 'A fullstack MERN app. The user can create an account and add and later update collections of flashcards that can be used to help remember information.',
-  screenshots: ['images/Book.ico', 'images/Chat.ico', 'images/Folder.ico'],
+  screenshots: [
+    'screenshots/flashcards/1.jpg',
+    'screenshots/flashcards/2.jpg',
+    'screenshots/flashcards/3.jpg',
+    'screenshots/flashcards/4.jpg',
+    'screenshots/flashcards/5.jpg',
+    'screenshots/flashcards/6.jpg',
+  ],
   technologies: [
     'React',
     'Redux',
