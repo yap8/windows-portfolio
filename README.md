@@ -1,7 +1,7 @@
 
 # FlashCards
 
-Portfolio made in windows 95 style
+Portfolio made in windows 95 style. Thanks for this awesome idea to [Erik Pak](https://github.com/ericpak)!
 
 ## Table of contents
 - [FlashCards](#flashcards)
@@ -49,6 +49,6 @@ Start the server
 
 To send email locally you need to add following environment variables
 
-`REACT_APP_SERVICE_ID=<service_id>`
-`REACT_APP_TEMPLATE_ID=<template_id>`
-`REACT_APP_PUBLIC_KEY=<public_key>`
+- `REACT_APP_SERVICE_ID=<service_id>`
+- `REACT_APP_TEMPLATE_ID=<template_id>`
+- `REACT_APP_PUBLIC_KEY=<public_key>`
